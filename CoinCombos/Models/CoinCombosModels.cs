@@ -3,10 +3,22 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CoinCombo
+namespace CoinCombos.Models
 {
   public class Coins
   {
+
+    private string _coins;
+
+    public Coins (int input)
+    {
+      _coins = MakeChange(input);
+    }
+
+    public string GetCoins()
+    {
+      return _coins;
+    }
 
     public string MakeChange (int total)
       {
